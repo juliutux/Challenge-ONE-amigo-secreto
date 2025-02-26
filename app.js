@@ -17,3 +17,14 @@ function limparCampo(){
     nome = document.querySelector('input');
     nome.value = '';
 }
+
+function atualizarListaAmigos() {
+    const lista = document.querySelector('listaAmigos');
+    lista.innerHTML = "";
+
+    for(let i = 0; i < amigos.legth; i++){
+        let item = document.createElement("li");
+        item.textContent = amigos[i];
+        lista.appendChild(item);
+    }
+}
